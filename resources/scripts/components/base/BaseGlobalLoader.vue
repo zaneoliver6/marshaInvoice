@@ -34,7 +34,7 @@
         ><i></i><i></i> <i></i><i></i><i></i> <i></i><i></i><i></i> <i></i
         ><i></i><i></i> <i></i><i></i><i></i> <i></i><i></i><i></i>
       </div>
-      <MainLogo
+      <!-- <MainLogo
         class="
           absolute
           block
@@ -48,7 +48,7 @@
           left-1/2
         "
         alt="Crater Logo"
-      />
+      /> -->
     </div>
   </div>
 </template>

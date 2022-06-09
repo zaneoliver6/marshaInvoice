@@ -13,14 +13,12 @@
         p-4
         mx-auto
         text-gray-900
-        md:p-8 md:col-span-6
-        lg:col-span-4
         flex-2
         md:pb-48 md:pt-40
       "
     >
       <div class="w-full">
-        <MainLogo
+        <!-- <MainLogo
           v-if="!loginPageLogo"
           class="block w-48 h-auto max-w-full mb-32 text-primary-500"
         />
@@ -29,30 +27,17 @@
           v-else
           :src="loginPageLogo"
           class="block w-48 h-auto max-w-full mb-32 text-primary-500"
+        /> -->
+
+        <img
+        :src="marshaLogo"
+        class="block w-48 h-auto max-w-full mb-32 text-primary-500 mx-auto"
         />
 
         <router-view />
-
-        <div
-          class="
-            pt-24
-            mt-0
-            text-sm
-            not-italic
-            font-medium
-            leading-relaxed
-            text-left text-gray-400
-            md:pt-40
-          "
-        >
-          <p class="mb-3">
-            {{ copyrightText }}
-            {{ new Date().getFullYear() }}
-          </p>
-        </div>
       </div>
     </div>
-    <div
+    <!-- <div
       class="
         relative
         flex-col
@@ -70,13 +55,6 @@
         overflow-hidden
       "
     >
-      <LoginBackground class="absolute h-full w-full" />
-
-      <LoginPlanetCrater
-        class="absolute z-10 top-0 right-0 h-[300px] w-[420px]"
-      />
-
-      <LoginBackgroundOverlay class="absolute h-full w-full right-[7.5%]" />
 
       <div class="md:pl-10 xl:pl-0 relative z-50 w-7/12 xl:w-5/12 xl:w-5/12">
         <h1
@@ -91,7 +69,7 @@
             lg:block
           "
         >
-          {{ pageHeading }}
+          
         </h1>
         <p
           class="
@@ -106,7 +84,7 @@
             lg:block
           "
         >
-          {{ pageDescription }}
+          
         </p>
       </div>
 
@@ -123,7 +101,7 @@
           bottom-0
         "
       />
-    </div>
+    </div> -->
   </div>
 </template>
 
@@ -165,6 +143,11 @@ const loginPageLogo = computed(() => {
   }
 
   return false
+})
+
+const marshaLogo = computed(() => {
+  const imgUrl = new URL('/img/marshaLogo.png', import.meta.url);
+  return imgUrl
 })
 </script>
 

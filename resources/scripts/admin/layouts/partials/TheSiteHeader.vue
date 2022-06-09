@@ -33,8 +33,7 @@
         md:block
       "
     >
-      <img v-if="adminLogo" :src="adminLogo" class="h-6" />
-      <MainLogo v-else class="h-6" light-color="white" dark-color="white" />
+      <h6>Marsha</h6>
     </router-link>
 
     <!-- toggle button-->
